@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FixtureDefinition>
+<FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>4.11.0</Version>
+  <Author>Erik-Jan Roggekamp</Author>
+ </Creator>
+ <Manufacturer>Ayra</Manufacturer>
+ <Model>ERO 540 MKii</Model>
+ <Type>Moving Head</Type>
+ <Channel Name="Pan">
+  <Group Byte="0">Pan</Group>
+  <Capability Min="0" Max="255">0% - 100%</Capability>
+ </Channel>
+ <Channel Name="Pan Fine">
+  <Group Byte="1">Pan</Group>
+  <Capability Min="0" Max="255">0% - 100%</Capability>
+ </Channel>
+ <Channel Name="Tilt">
+  <Group Byte="0">Tilt</Group>
+  <Capability Min="0" Max="255">0% - 100%</Capability>
+ </Channel>
+ <Channel Name="Tilt Fine">
+  <Group Byte="1">Tilt</Group>
+  <Capability Min="0" Max="255">0% - 100%</Capability>
+ </Channel>
+ <Channel Name="Pan and tilt Speed (slow-fast)">
+  <Group Byte="0">Speed</Group>
+  <Capability Min="0" Max="255">min - max</Capability>
+ </Channel>
+ <Channel Name="Dimmer / Shutter  mode">
+  <Group Byte="0">Shutter</Group>
+  <Capability Min="0" Max="7">Shutter closed</Capability>
+  <Capability Min="8" Max="134">Dimmer 0 - 100% </Capability>
+  <Capability Min="135" Max="239">Strobe, slow-fast</Capability>
+  <Capability Min="240" Max="255">Shutter open</Capability>
+ </Channel>
+ <Channel Name="Red">
+  <Group Byte="0">Intensity</Group>
+  <Colour>Red</Colour>
+  <Capability Min="0" Max="255" Color="#ff0000">0% - 100%</Capability>
+ </Channel>
+ <Channel Name="Green">
+  <Group Byte="0">Intensity</Group>
+  <Colour>Green</Colour>
+  <Capability Min="0" Max="255" Color="#00ff00">0% - 100%</Capability>
+ </Channel>
+ <Channel Name="Blue">
+  <Group Byte="0">Intensity</Group>
+  <Colour>Blue</Colour>
+  <Capability Min="0" Max="255" Color="#0000ff">0% - 100%</Capability>
+ </Channel>
+ <Channel Name="Color Macro">
+  <Group Byte="0">Nothing</Group>
+  <Capability Min="0" Max="255" Color="#ffffff">0% - 100%</Capability>
+ </Channel>
+ <Channel Name="Color Macro Speed">
+  <Group Byte="0">Speed</Group>
+  <Capability Min="0" Max="255">Slow - Fast</Capability>
+ </Channel>
+ <Channel Name="Working mode">
+  <Group Byte="0">Effect</Group>
+  <Capability Min="0" Max="127">Auto mode</Capability>
+  <Capability Min="128" Max="255">Sound controlled mode</Capability>
+ </Channel>
+ <Channel Name="Gobo">
+  <Group Byte="0">Gobo</Group>
+  <Capability Min="0" Max="12">Gobo 1</Capability>
+  <Capability Min="13" Max="25">Gobo 2</Capability>
+  <Capability Min="26" Max="38">Gobo 3</Capability>
+  <Capability Min="39" Max="51">Gobo 4</Capability>
+  <Capability Min="52" Max="65">Gobo 5</Capability>
+  <Capability Min="66" Max="77">Gobo 6</Capability>
+  <Capability Min="78" Max="90">Gobo 7</Capability>
+  <Capability Min="91" Max="103">Gobo 8</Capability>
+  <Capability Min="104" Max="116">Gobo 9</Capability>
+  <Capability Min="117" Max="127">Gobo 10</Capability>
+  <Capability Min="128" Max="191">Clockwise Gobo Scroll</Capability>
+  <Capability Min="192" Max="255">Counter Clockwise Gobo scroll</Capability>
+ </Channel>
+ <Channel Name="Gobo 5">
+  <Group Byte="0">Gobo</Group>
+  <Capability Min="0" Max="127">Gobo selection</Capability>
+  <Capability Min="128" Max="191">Clockwise Gobo scroll</Capability>
+  <Capability Min="192" Max="255">CCW Gobo Scroll</Capability>
+ </Channel>
+ <Channel Name="Color 5">
+  <Group Byte="0">Colour</Group>
+  <Capability Min="0" Max="127">Color Macro</Capability>
+  <Capability Min="128" Max="255">CW &amp; CCW Rainbow</Capability>
+ </Channel>
+ <Mode Name="13 channel">
+  <Physical>
+   <Bulb Type="LED" Lumens="0" ColourTemperature="0"/>
+   <Dimensions Weight="5" Width="175" Height="175" Depth="240"/>
+   <Lens Name="Other" DegreesMin="13" DegreesMax="13"/>
+   <Focus Type="Fixed" PanMax="13" TiltMax="13"/>
+   <Technical PowerConsumption="60" DmxConnector="3-pin"/>
+  </Physical>
+  <Channel Number="0">Pan</Channel>
+  <Channel Number="1">Pan Fine</Channel>
+  <Channel Number="2">Tilt</Channel>
+  <Channel Number="3">Tilt Fine</Channel>
+  <Channel Number="4">Pan and tilt Speed (slow-fast)</Channel>
+  <Channel Number="5">Dimmer / Shutter  mode</Channel>
+  <Channel Number="6">Red</Channel>
+  <Channel Number="7">Green</Channel>
+  <Channel Number="8">Blue</Channel>
+  <Channel Number="9">Color Macro</Channel>
+  <Channel Number="10">Color Macro Speed</Channel>
+  <Channel Number="11">Working mode</Channel>
+  <Channel Number="12">Gobo</Channel>
+  <Head>
+   <Channel>0</Channel>
+   <Channel>2</Channel>
+  </Head>
+ </Mode>
+ <Mode Name="5 channel">
+  <Physical>
+   <Bulb Type="LED" Lumens="0" ColourTemperature="0"/>
+   <Dimensions Weight="5" Width="175" Height="175" Depth="240"/>
+   <Lens Name="Other" DegreesMin="13" DegreesMax="13"/>
+   <Focus Type="Fixed" PanMax="13" TiltMax="13"/>
+   <Technical PowerConsumption="60" DmxConnector="3-pin"/>
+  </Physical>
+  <Channel Number="0">Pan</Channel>
+  <Channel Number="1">Tilt</Channel>
+  <Channel Number="2">Dimmer / Shutter  mode</Channel>
+  <Channel Number="3">Color 5</Channel>
+  <Channel Number="4">Gobo 5</Channel>
+ </Mode>
+</FixtureDefinition>
